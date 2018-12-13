@@ -1,0 +1,15 @@
+C:\Users\bertrand\source\repos\MyApi\MyApi\bin\Debug\netcoreapp2.1\MyApi.deps.json
+C:\Users\bertrand\source\repos\MyApi\MyApi\bin\Debug\netcoreapp2.1\MyApi.runtimeconfig.json
+C:\Users\bertrand\source\repos\MyApi\MyApi\bin\Debug\netcoreapp2.1\MyApi.runtimeconfig.dev.json
+C:\Users\bertrand\source\repos\MyApi\MyApi\bin\Debug\netcoreapp2.1\MyApi.dll
+C:\Users\bertrand\source\repos\MyApi\MyApi\bin\Debug\netcoreapp2.1\MyApi.pdb
+C:\Users\bertrand\source\repos\MyApi\MyApi\obj\Debug\netcoreapp2.1\MyApi.csprojAssemblyReference.cache
+C:\Users\bertrand\source\repos\MyApi\MyApi\obj\Debug\netcoreapp2.1\MyApi.csproj.CoreCompileInputs.cache
+C:\Users\bertrand\source\repos\MyApi\MyApi\obj\Debug\netcoreapp2.1\MyApi.RazorAssemblyInfo.cache
+C:\Users\bertrand\source\repos\MyApi\MyApi\obj\Debug\netcoreapp2.1\MyApi.RazorAssemblyInfo.cs
+C:\Users\bertrand\source\repos\MyApi\MyApi\obj\Debug\netcoreapp2.1\MyApi.AssemblyInfoInputs.cache
+C:\Users\bertrand\source\repos\MyApi\MyApi\obj\Debug\netcoreapp2.1\MyApi.AssemblyInfo.cs
+C:\Users\bertrand\source\repos\MyApi\MyApi\obj\Debug\netcoreapp2.1\MyApi.RazorTargetAssemblyInfo.cache
+C:\Users\bertrand\source\repos\MyApi\MyApi\obj\Debug\netcoreapp2.1\MyApi.dll
+C:\Users\bertrand\source\repos\MyApi\MyApi\obj\Debug\netcoreapp2.1\MyApi.pdb
+C:\Users\bertrand\source\repos\MyApi\MyApi\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
