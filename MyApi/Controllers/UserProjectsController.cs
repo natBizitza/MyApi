@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyApi.Models;
+using Newtonsoft.Json;
 
 namespace MyApi.Controllers
 {
@@ -22,9 +23,48 @@ namespace MyApi.Controllers
 
         // GET: api/UserProjects
         [HttpGet]
-        public IEnumerable<UserProject> GetUserProject()
+        public async Task<string> GetUserProjectAsync()
         {
-            return _context.UserProject;
+            List<UserProject> userProjects = await _context.UserProject.ToListAsync();
+            foreach (UserProject userProject in userProjects)
+            {
+                if (userProject.ProjectsId != null)
+                {
+                    userProject.Projects = _context.Project.Single(x => x.Id == userProject.ProjectsId);
+                    foreach (Module module in _context.Module.Where(x => x.ProjectId == userProject.ProjectsId))
+                    {
+
+                        userProject.Projects.Module.Add(module);
+
+                        foreach (Submodule submodule in _context.Submodule.Where(x => x.Id == module.Id))
+                        {
+
+                            userProject.Projects.Module.Single(x => x.Id == module.Id).Submodule.Add(submodule);
+
+                            foreach (Tasks task in _context.Task.Where(x => x.Id == submodule.Id))
+                            {
+                                userProject.Projects.Module.Single(x => x.Id == module.Id).Submodule.Single(x => x.Id == submodule.Id).Task.Add(task);
+
+                                foreach (Subtask subtask in _context.Subtask.Where(x => x.Id == task.Id))
+                                {
+                                    userProject.Projects.Module.Single(x => x.Id == module.Id).Submodule.Single(x => x.Id == submodule.Id).Task.Single(x => x.Id == task.Id).Subtask.Add(subtask);
+                                }
+
+                            }
+                        }
+                    }
+                }
+                if (userProject.AppUsersId != null)
+                {
+                    userProject.AppUsers = _context.AspNetUsers.Single(x => x.Id == userProject.AppUsersId);
+
+                }
+            }
+            var json = JsonConvert.SerializeObject(userProjects, Formatting.None, new JsonSerializerSettings
+            {
+                PreserveReferencesHandling = PreserveReferencesHandling.All
+            });
+            return json;
         }
 
         // GET: api/UserProjects/5
