@@ -26,7 +26,7 @@ namespace MyApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string connection = @"Server=tcp:oesia.database.windows.net,1433;Initial Catalog=oesia;Persist Security Info=False;User ID=adminoesia;Password=Gruponoguay1.;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string connection = @"Server=tcp:oesia.database.windows.net,1433;Initial Catalog=oesia;Persist Security Info=False;;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
             services.AddDbContext<Models.oesiaContext>(options => options.UseSqlServer(connection));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
