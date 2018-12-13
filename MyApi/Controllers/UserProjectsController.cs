@@ -40,14 +40,14 @@ namespace MyApi.Controllers
                         {
 
                             userProject.Projects.Module.Single(x => x.Id == module.Id).Submodule.Add(submodule);
-
-                            foreach (Tasks task in _context.Task.Where(x => x.Id == submodule.Id))
+                            List<Tasks> tasks = _context.Task.Where(x => x.Id == submodule.Id).ToList();
+                            foreach (Tasks task in tasks)
                             {
-                                userProject.Projects.Module.Single(x => x.Id == module.Id).Submodule.Single(x => x.Id == submodule.Id).Task.Add(task);
+                              (userProject.Projects.Module.Single(x => x.Id == module.Id).Submodule.Single(x => x.Id == submodule.Id)).Task.Add(task);
 
-                                foreach (Subtask subtask in _context.Subtask.Where(x => x.Id == task.Id))
+                                foreach (Subtask subtask in _context.Subtask.Where(x => x.Id == task.Id).ToList())
                                 {
-                                    userProject.Projects.Module.Single(x => x.Id == module.Id).Submodule.Single(x => x.Id == submodule.Id).Task.Single(x => x.Id == task.Id).Subtask.Add(subtask);
+                                    (userProject.Projects.Module.Single(x => x.Id == module.Id).Submodule.Single(x => x.Id == submodule.Id).Task.Single(x => x.Id == task.Id)).Subtask.Add(subtask);
                                 }
 
                             }
