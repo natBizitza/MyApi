@@ -12580,11 +12580,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\roman\\Source\\Repos\\MyApi2\\MyApi\\MyApi.csproj",
+      "projectUniqueName": "C:\\Users\\roman\\Source\\Repos\\MyApiBertoGitHub\\MyApi\\MyApi.csproj",
       "projectName": "MyApi",
-      "projectPath": "C:\\Users\\roman\\Source\\Repos\\MyApi2\\MyApi\\MyApi.csproj",
+      "projectPath": "C:\\Users\\roman\\Source\\Repos\\MyApiBertoGitHub\\MyApi\\MyApi.csproj",
       "packagesPath": "C:\\Users\\roman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\roman\\Source\\Repos\\MyApi2\\MyApi\\obj\\",
+      "outputPath": "C:\\Users\\roman\\Source\\Repos\\MyApiBertoGitHub\\MyApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
